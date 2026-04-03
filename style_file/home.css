@@ -4,7 +4,7 @@
   --primary-heading-text-color: #e0b860;
   --button-text-color: #1f3a32;
   --text-color-home: #f3ead6;
-  --golden-border-color-1: #c9a24d;
+  --golden-border-color-1: #a77200;
   --golden-border-color-2: #e0b860;
   --golden-img-border: url('../assets/backgroundImage/goldenBorderBackgroundNew.avif');
   --bg-paper-texture1: url('../assets/backgroundImage/body_bg_1.avif');
@@ -48,7 +48,9 @@ p {
 /* ______Home Page CSS Start_______ */
 /* ________________________________ */
 .home_page {
-    min-height: 70vh;;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
 .home_page .home_heading {
     font-family: var(--font-home-heading);
@@ -83,13 +85,60 @@ p {
 }
 .home_page .card_div .home_card_box_parent .home_card_box img{
   height: 50px;
-  width: auto;;
+  width: 50px;
 }
 .home_page .card_div .home_card_box_parent .home_card_box .home_card_box_heading{
   color: var(--primary-heading-text-color);
   font-size: 26px;
   font-weight: 700;
   padding: 10px 0px;
+}
+
+
+/* Home CTA Button */
+.home_cta_parent{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px 10px 0px;
+}
+.home_cta_inside{
+    background: var(--bg-button) no-repeat top/cover;
+    padding: 3px;
+    border-radius: 5px;
+}
+.home_cta_inside .home_cta_border{
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-text);
+    color: var(--button-text-color);
+    border: 1px solid var(--golden-border-color-1);
+    padding: 10px 30px;
+
+}
+.home_cta_inside .home_cta_a{
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-text);
+    color: var(--button-text-color);
+}
+
+/* Home Location  */
+.home_location{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+.home_location .home_location_img{
+    width: 30px;
+    height: 30px;
+}
+.home_location .home_location_text{
+    text-align: center;;
 }
 
 
