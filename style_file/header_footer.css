@@ -46,9 +46,11 @@ header .header_golden_bar{
   list-style: none;
 }
 
-.desktop_menu li {
-  cursor: pointer;
+.desktop_menu li{
   position: relative;
+}
+.desktop_menu li a{
+  text-decoration: none;
   color: var(--primary-heading-text-color);
   font-family: var(--font-heading);
   font-weight: 500;
@@ -62,7 +64,7 @@ header .header_golden_bar{
 }   
 .header_button{
     padding: 8px 30px;
-    background: transparent;
+    background-color: transparent;
     color: var(--button-text-color);
     border: 1px solid var(--golden-border-color-1);
     border-radius: 3px;
@@ -81,7 +83,8 @@ header .header_golden_bar{
   bottom: -5px;
   width: 0%;
   height: 2px;
-  background: var(--button-text-color);
+  border-radius: 5px;
+  background: var(--primary-heading-text-color);
   transition: 0.3s;
 }
 
@@ -140,7 +143,7 @@ header .header_golden_bar{
 .mobile_menu .logo {
     padding: 10px 0;
     text-align: center;
-    border-bottom: 4px solid var(--golden-border-color-2);
+    border-bottom: 2px solid var(--button-text-color);
 }
 /* Active state */
 .mobile_menu.active {
@@ -155,13 +158,34 @@ header .header_golden_bar{
   padding-top: 20px;
 }
 
-.mobile_menu li {
+.mobile_menu li{
+  padding: 10px 0;
+}
+.mobile_menu li a{
+  text-decoration: none;;
   padding: 10px 0;
   font-size: 18px;
   cursor: pointer;
   color: #1f3a32;
   font-family: var(--font-heading);
   font-weight: bold;
+}
+
+.mobile_header_button_parent{
+    background: var(--bg-button) center/cover no-repeat;
+    padding: 3px;
+    border-radius: 5px;
+}   
+.mobile_header_button{
+    background-color: transparent;
+    padding: 10px 0px;
+    width: 100%;
+    color: var(--button-text-color);
+    border: 1px solid var(--golden-border-color-1);
+    border-radius: 3px;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* Responsive */
