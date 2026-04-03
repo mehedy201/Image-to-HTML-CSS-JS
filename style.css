@@ -1,0 +1,363 @@
+/* ___________________________ */
+/* _________Root CSS Start____ */
+:root {
+  /* --primary-color: #1f3a32;
+  --secondary-color: #926300; */
+  --primary-heading-text-color: #e0b860;
+  --button-text-color: #1f3a32;
+  --text-color-home: #f3ead6;
+  --golden-border-color-1: #c9a24d;
+  --golden-border-color-2: #e0b860;
+  --golden-img-border: url('./assets/backgroundImage/goldenBorderBackgroundNew.avif');
+  --bg-paper-texture1: url('./assets/backgroundImage/body_bg_1.avif');
+  --bg-button: url('./assets/backgroundImage/buttonBackground.avif');
+  --font-home-heading: "Pirata One", serif;
+  --font-heading: "Cinzel", serif;
+  --font-text: "Inter", sans-serif;
+}
+/* ___________________________ */
+/* _________Root CSS End______ */
+
+
+/* ___________________________ */
+/* ______Genarel CSS Start____ */
+/* ___________________________ */
+/* ______Genarel CSS End______ */
+
+
+
+
+
+/* ___________________________ */
+/* ______Genarel CSS Start____ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(./assets/home-page/home_box_background.avif) no-repeat top/cover;
+}
+.container {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+p {
+    font-family: var(--font-text);
+    color: var(--text-color-home);
+    line-height: 25px;
+}
+/* ___________________________ */
+/* ______Genarel CSS End______ */
+
+/* ___________________________ */
+/* ______Header CSS Start_____ */
+header{
+    display: flex;
+    align-items: center;
+    background: url('./assets/backgroundImage/HeaderBackground.avif') center/cover no-repeat;
+    padding: 20px 0;
+    position: relative;
+}
+header .header_golden_bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: ver(--primary-heading-text-color);
+    box-shadow: inset 0.1px 0.1px 2px rgba(0, 0, 0, 0.3);
+}
+.logo img{
+    width: 220px;
+    height: auto;
+}
+/* Desktop Menu */
+.desktop_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktop_menu ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.desktop_menu li {
+  cursor: pointer;
+  position: relative;
+  color: var(--primary-heading-text-color);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.header_button_parent{
+    background: var(--bg-button) center/cover no-repeat;
+    padding: 3px;
+    border-radius: 5px;
+}   
+.header_button{
+    padding: 8px 30px;
+    background: transparent;
+    color: var(--button-text-color);
+    border: 1px solid var(--golden-border-color-1);
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Simple hover effect */
+.desktop_menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--button-text-color);
+  transition: 0.3s;
+}
+
+.desktop_menu li:hover::after {
+  width: 100%;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: url('./assets/backgroundImage/grunge-paper-background.jpg') center/cover no-repeat;
+  transition: 0.4s;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7.7px, 7.7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7.7px, -7.7px);
+}
+
+/* Mobile Menu */
+.mobile_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-paper-texture1) center/cover no-repeat;
+  transform: translateY(-150%);
+  transition: 0.5s ease;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  z-index: 1000;
+  overflow-y: auto;
+  opacity: 0;
+  padding-top: 50px;
+}
+/* Logo bottom spacing */
+.mobile_menu .logo {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--golden-border-color-2);
+}
+/* Active state */
+.mobile_menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Mobile content */
+.mobile_menu ul {
+  list-style: none;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.mobile_menu li {
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #1f3a32;
+  font-family: var(--font-heading);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 1160px) {
+
+    .menu_with_hamburger{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+  .desktop_menu ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ___________________________ */
+/* ______Header CSS End_______ */
+
+/* ________________________________ */
+/* ______Home Page CSS Start_______ */
+/* ________________________________ */
+.home_page {
+    min-height: 70vh;;
+}
+.home_page .home_heading {
+    font-family: var(--font-home-heading);
+    font-size: 60px;
+    color: var(--primary-heading-text-color);
+    text-align: center;
+    padding: 50px 0px 5px 0px;
+}
+.home_page .home_heading_sub_text {
+    text-align: center;
+}
+.home_page .card_div {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.home_page .card_div .home_card_box_parent{
+  background: var(--golden-img-border) no-repeat top/cover;
+  min-height: 170px;
+  padding: 2px;
+  border-radius: 8px;
+}
+.home_page .card_div .home_card_box_parent .home_card_box{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: url(./assets/home-page/home_box_background.avif) no-repeat top/cover;
+}
+.home_page .card_div .home_card_box_parent .home_card_box img{
+  height: 50px;
+  width: auto;;
+}
+.home_page .card_div .home_card_box_parent .home_card_box .home_card_box_heading{
+  color: var(--primary-heading-text-color);
+  font-size: 26px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 1111px) {
+  .home_page .card_div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+}
+@media (max-width: 768px) {
+  .home_page .home_heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .home_page .card_div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ________________________________ */
+/* ______Home Page CSS End_________ */
+/* ________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________ */
+/* ______Footer CSS Start_____ */
+footer {
+    margin-top: 20px;
+    background: url('./assets/backgroundImage/FooterBackground.avif') center/cover no-repeat;
+    padding: 40px 0;
+    position: relative;
+}
+footer .footer_golden_bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #e0b860;
+    box-shadow: inset 0.1px 0.1px 2px rgba(0, 0, 0, 0.3);
+}
+footer .footer_parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_parent .footer_phone p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    color: #e0b860;
+    font-weight: 500;
+}
+.footer_parent .footer_phone p img{
+    width: 20px;
+    height: auto;
+}
+.footer_parent .footer_links a{
+    color: #e0b860;
+    text-decoration: none;
+}
+
+/* ___________________________ */
+/* ______Footer CSS End_______ */
