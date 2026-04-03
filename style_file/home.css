@@ -1,0 +1,134 @@
+/* ___________________________ */
+/* _________Root CSS Start____ */
+:root {
+  --primary-heading-text-color: #e0b860;
+  --button-text-color: #1f3a32;
+  --text-color-home: #f3ead6;
+  --golden-border-color-1: #c9a24d;
+  --golden-border-color-2: #e0b860;
+  --golden-img-border: url('../assets/backgroundImage/goldenBorderBackgroundNew.avif');
+  --bg-paper-texture1: url('../assets/backgroundImage/body_bg_1.avif');
+  --bg-button: url('../assets/backgroundImage/buttonBackground.avif');
+  --font-home-heading: "Pirata One", serif;
+  --font-heading: "Cinzel", serif;
+  --font-text: "Inter", sans-serif;
+}
+/* ___________________________ */
+/* _________Root CSS End______ */
+
+/* ___________________________ */
+/* ______Genarel CSS Start____ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../assets/home-page/home_box_background.avif) no-repeat top/cover;
+}
+.container {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+p {
+    font-family: var(--font-text);
+    color: var(--text-color-home);
+    line-height: 25px;
+}
+/* ___________________________ */
+/* ______Genarel CSS End______ */
+
+
+
+/* ________________________________ */
+/* ______Home Page CSS Start_______ */
+/* ________________________________ */
+.home_page {
+    min-height: 70vh;;
+}
+.home_page .home_heading {
+    font-family: var(--font-home-heading);
+    font-size: 60px;
+    color: var(--primary-heading-text-color);
+    text-align: center;
+    padding: 50px 0px 5px 0px;
+}
+.home_page .home_heading_sub_text {
+    text-align: center;
+}
+.home_page .card_div {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.home_page .card_div .home_card_box_parent{
+  background: var(--golden-img-border) no-repeat top/cover;
+  min-height: 170px;
+  padding: 2px;
+  border-radius: 8px;
+}
+.home_page .card_div .home_card_box_parent .home_card_box{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background: url('../assets/home-page/home_box_background.avif') no-repeat top/cover;
+}
+.home_page .card_div .home_card_box_parent .home_card_box img{
+  height: 50px;
+  width: auto;;
+}
+.home_page .card_div .home_card_box_parent .home_card_box .home_card_box_heading{
+  color: var(--primary-heading-text-color);
+  font-size: 26px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 1111px) {
+  .home_page .card_div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+}
+@media (max-width: 768px) {
+  .home_page .home_heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .home_page .card_div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ________________________________ */
+/* ______Home Page CSS End_________ */
+/* ________________________________ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
