@@ -63,7 +63,7 @@ header .header_golden_bar{
     border-radius: 5px;
 }   
 .header_button{
-    padding: 8px 30px;
+    padding: 4px 30px !important;
     background-color: transparent;
     color: var(--button-text-color);
     border: 1px solid var(--golden-border-color-1);
