@@ -42,3 +42,21 @@ body {
     width: 120px;
     height: auto;
 }
+
+/* Responsive icon sizes*/
+@media (max-width: 768px) {
+.new_players_page .top_left_icon{
+    width: 80px;
+    height: auto;
+}
+.new_players_page .top_center_icon{
+    width: 200px;
+    height: auto;
+    top: -20px;
+}
+.new_players_page .top_right_icon{
+    width: 80px;
+    height: auto;
+}
+ 
+}
