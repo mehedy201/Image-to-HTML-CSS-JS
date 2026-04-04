@@ -1,0 +1,6 @@
+body {
+  background: url('../assets/backgroundImage/body_bg_1.avif') no-repeat top/cover;
+}
+.new_players_page{
+    min-height: 70vh;
+}
