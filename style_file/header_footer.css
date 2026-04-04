@@ -72,6 +72,11 @@ header .header_golden_bar{
 .desktop_menu li{
   position: relative;
 }
+
+.desktop_menu li.active a {
+  color: #aa8200;
+}
+
 .desktop_menu li a{
   text-decoration: none;
   color: var(--primary-heading-text-color);

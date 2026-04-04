@@ -1,5 +1,17 @@
+:root {
+  --primary-heading-text-color: #e0b860;
+  --button-text-color: #1f3a32;
+  --golden-border-color-1: #c9a24d;
+  --golden-border-color-2: #e0b860;
+  --bg-paper-texture1: url('../assets/backgroundImage/body_bg_1.avif');
+  --bg-button: url('../assets/backgroundImage/buttonBackground.avif');
+  --font-home-heading: "Pirata One", serif;
+  --font-heading: "Cinzel", serif;
+  --font-text: "Inter", sans-serif;
+}
+
 body {
-  background: url('../assets/backgroundImage/body_bg_1.avif') no-repeat top/cover;
+  background: var(--bg-paper-texture1) no-repeat top/cover;
 }
 .new_players_page{
     min-height: 70vh;
