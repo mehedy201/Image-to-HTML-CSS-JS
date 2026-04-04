@@ -98,10 +98,13 @@ p {
 
 
 /* Home CTA Button */
+.home_cta_button{
+  padding: 50px 0px 10px 0px;
+}
 .home_cta_parent{
     display: flex;
     justify-content: center;
-    padding: 50px 0px 10px 0px;
+    padding: 10px 0px;
 }
 .home_cta_inside{
     background: var(--bg-button) no-repeat top/cover;
