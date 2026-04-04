@@ -58,9 +58,11 @@ p {
     color: var(--primary-heading-text-color);
     text-align: center;
     padding: 50px 0px 5px 0px;
+    text-shadow: 20px 5px 30px rgb(0, 0, 0);
 }
 .home_page .home_heading_sub_text {
     text-align: center;
+    text-shadow: 10px 5px 20px rgb(0, 0, 0);
 }
 .home_page .card_div {
   padding-top: 30px;
