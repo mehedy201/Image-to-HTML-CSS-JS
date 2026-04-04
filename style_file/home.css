@@ -16,33 +16,10 @@
 /* ___________________________ */
 /* _________Root CSS End______ */
 
-/* ___________________________ */
-/* ______Genarel CSS Start____ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 body {
   background: url('../assets/home-page/home-body-bg.avif') no-repeat top/cover;
 }
-.container {
-    width: min(100%, 1200px);
-    margin-inline: auto;
-    padding-inline: 16px;
-}
-h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-}
-p {
-    font-family: var(--font-text);
-    color: var(--text-color-home);
-    line-height: 25px;
-}
-/* ___________________________ */
-/* ______Genarel CSS End______ */
-
-
 
 /* ________________________________ */
 /* ______Home Page CSS Start_______ */
